@@ -1,0 +1,357 @@
+---   n = 0   ----nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+
+
+---   n = 0   ----nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+
+
+---   n = 0   ----nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+
+
+---   n = 0   ----nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+
+
+---   n = 0   ----nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+
+
+---   n = 0   ----nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+
+
+---   n = 0   ----nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+
+
+---   n = 0   ----nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+
+
+---   n = 0   ----nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+
+
+---   n = 0   ----nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+
+
+---   n = 0   ----nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+
+
+---   n = 0   ----nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+
+
+---   n = 0   ----nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+
+
+---   n = 0   ----nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+
+
+---   n = 0   ----nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+
+
+---   n = 0   ----nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+
+
+---   n = 0   ----nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+
+
+---   n = 0   ----nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+
+
+---   n = 0   ----nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+
+
+---   n = 0   ----nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+
+
+---   n = 0   ----nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+
+
+---   n = 0   ----nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+
+
+---   n = 0   ----nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+
+
+---   n = 0   ----nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+
+
+---   n = 0   ----nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+
+
+---   n = 0   ----nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+
+
+---   n = 0   ----nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+
+
+---   n = 0   ----nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+
+
+---   n = 0   ----27.333328
+-30.999992
+-33.999996
+-43.000000
+-43.999996
+
+
+---   n = 0   ----nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+
+
+---   n = 0   ----nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+
+
+---   n = 0   ----27.333328
+-30.999992
+-33.999996
+-43.000000
+-43.999996
+
+
+---   n = 0   ----27.333328
+-30.999992
+-33.999996
+-43.000000
+-43.999996
+
+
+---   n = 0   ----nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+
+
+---   n = 0   ----nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+-nan(ind)
+
+
+---   n = 0   ----27.333328
+-30.999992
+-33.999996
+-43.000000
+-43.999996
+
+
+---   n = 0   ----27.333328
+-30.999992
+-33.999996
+-43.000000
+-43.999996
+
+

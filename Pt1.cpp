@@ -1,7 +1,10 @@
-﻿#include "path10.h"
+﻿#include "path5.h"
 #include <iostream>
 #include <fstream>
 #include <math.h>
+#include <sstream>
+#include <string>
+#include <iomanip>
 
 /*
 * 1. При ошибке завершать выполнение программы
@@ -24,7 +27,7 @@
 namespace F{
    typedef float real;
    typedef float realscal;
-   constexpr const char *fmt = "%.6f\n";
+   constexpr const char *fmt = "%10.6f\n";
 }
 namespace D{
    typedef double real;
@@ -169,10 +172,10 @@ void LU(real *DI, real *AL, real *AU, int *IA){
          //AL AU sum
          if(i>=j-jcount){
             index = IA[j]+(i-(j-jcount))-1;
-            for(int m = 1; m<=i; m++){
-               if(m<jcount&&m<icount){
-                  Utmp += AU[IA[j+1]-1-(j-i)-m]*AL[IA[i+1]-1-m];
-                  Ltmp += AU[IA[i+1]-1-m]*AL[IA[j+1]-1-(j-i)-m];
+            for(int m = 0; m<i; m++){
+               if(jcount-m>1&&icount-m>0){
+                  Utmp += AU[IA[j+1]-2-j+i-m]*AL[IA[i+1]-2-m];
+                  Ltmp += AU[IA[i+1]-2-m]*AL[IA[j+1]-2-j+i-m];
                }
             }
             //Меняем AU[index] AL[index]
@@ -185,6 +188,7 @@ void LU(real *DI, real *AL, real *AU, int *IA){
             Utmp = .0;
             Ltmp = .0;
          };
+         cout<<endl;
       }
    }
 }
@@ -420,6 +424,29 @@ void prog3(){
    printData(DI, AL, AU, IA, vec);
 }
 
+void PrintDenseMatrix(real *DI, real *AL, real *AU, int *IA){
+   FILE *file;
+   if(fopen_s(&file, "A.txt", "w") != 0){
+      cerr << "Ошибка: не удалось открыть файл " << endl;
+      return;
+   }
+
+   for(int i = 0; i < dim; ++i){
+      ostringstream line;
+      line << fixed << setprecision(6);
+      for(int j = 0; j < dim; ++j){
+         if(i==j){
+            line << setw(12) << DI[i];
+         } else{
+            line << setw(12) << getElem(i,j,IA,AL,AU);
+         }
+      }
+      line << endl;
+      fprintf(file, "%s", line.str().c_str());
+   }
+   fclose(file);
+}
+
 void testmaker(){
    inputDim(path::Dim);
    int *IA = new int[dim];
@@ -429,36 +456,13 @@ void testmaker(){
    real *DI = new real[dim];
    real *vec = new real[dim];
 
-   real f1[15];
-   real d1[15];
-   ifstream f1F;
-   ifstream d1F;
-   f1F.open("f1.txt");
-   d1F.open("d1.txt");
-   if(f1F&&d1F){
-      for(int i = 0; i<15; i++){
-         d1F>>d1[i];
-         f1F>>f1[i];
-      }
-      f1F.close();
-      d1F.close();
-   } else{
-      cout<<"Can't open supporting files"<<endl;
-   }
-//sizeof(f1)/sizeof(f1[0])
-   for(int i = 0; i<1; i++){
-      inputData(path::DI, DI, dim);
-      inputData(path::AL, AL, profiles);
-      inputData(path::AL, AU, profiles);
-      inputData(path::F, vec, dim);
-      //DI[0]=d1[i];
-      //vec[0]=f1[i];
-      LU(DI, AL, AU, IA);
-      printData(DI, AL, AU, IA, vec);
-      Y(DI, AL, AU, IA, vec);
-      X(DI, AL, AU, IA, vec);
-      outputX(path::X, vec);
-   }
+
+   inputData(path::DI, DI, dim);
+   inputData(path::AL, AL, profiles);
+   inputData(path::AL, AU, profiles);
+   inputData(path::F, vec, dim);
+   LU(DI, AL, AU, IA);
+   PrintDenseMatrix(DI,AL,AU,IA);
 }
 
 int main(){

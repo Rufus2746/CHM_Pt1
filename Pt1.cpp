@@ -27,25 +27,27 @@
 namespace F{
    typedef float real;
    typedef float realscal;
-   constexpr const char *fmt = "%10.6f\n";
+   constexpr const char *fmt = "%10.6E\n";
 }
 namespace D{
    typedef double real;
    typedef double realscal;
-   constexpr const char *fmt = "%18.14lf\n";
+   constexpr const char *fmt = "%18.14E\n";
 }
 namespace FD{
    typedef float real;
    typedef double realscal;
-   constexpr const char *fmt = "%10.6f\n";
+   constexpr const char *fmt = "%10.6E\n";
 }
 
 using namespace std;
-using namespace F;
+using namespace D;
  
 int dim = 0;
 int profiles = 0;
 int n = 0;
+int space = 18;
+int precision = 14;
 
 void inputDim(string path){
    ifstream inFile;
@@ -55,7 +57,7 @@ void inputDim(string path){
       inFile.close();
    } else{
       cout<<"Can't open file:"+path<<endl;
-      //Добавить выход из программы
+      exit(EXIT_FAILURE);
    }
 }
 void inputIA(string path, int *arr){
@@ -169,7 +171,6 @@ void LU(real *DI, real *AL, real *AU, int *IA){
             index = IA[j]+(i-(j-jcount))-1;
             for(int m = 0; m<i; m++){
                if(m>=j-jcount&&m>=i-icount){
-                  //cout<<"i "<<i<<"\tj "<<j<<"\tU "<<AU[IA[j]-1+m-(j-jcount)]<<"\tL "<<AL[IA[i]-1+m-(i-icount)]<<endl;
                   Utmp += AU[IA[j]-1+m-(j-jcount)]*AL[IA[i]-1+m-(i-icount)];
                   Ltmp += AU[IA[i]-1+m-(i-icount)]*AL[IA[j]-1+m-(j-jcount)];
                }
@@ -248,136 +249,80 @@ void generateHilbert(){
    DIf.close();
 }
 
-//void GaussVopros(real *DI, real *AL, real *AU, int *IA, real *X){
-//   real a[5][6]{};
-//   for(int i = 0; i<dim; i++){
-//      for(int j = 0; j<dim; j++){
-//         if(i==j){
-//            a[i][j] = DI[i];
-//         } else{
-//            if(i<j){
-//               if(IA[j+1]-IA[j] != 0 && j-(IA[j+1]-IA[j]) <= i){
-//                  a[i][j] = AU[IA[j+1]-1-(j-i)];
-//               }
-//            } else{
-//               if(IA[i+1]-IA[i] != 0 && i-(IA[i+1]-IA[i]) <= j){
-//                  a[i][j] = AL[IA[i+1]-1-(i-j)];
-//               }
-//            }
-//         }
-//      }
-//      a[i][dim] = X[i];
-//   }
-//
-//   for(auto &row : a){
-//      for(auto &column : row){
-//         cout << column << " ";
-//      }
-//      cout << endl;
-//   }
-//
-//   for(int i = 0; i < dim; i++){
-//      // Поиск строки с максимальным элементом в текущем столбце
-//      int maxRow = i;
-//      for(int k = i + 1; k < dim; k++){
-//         if(fabs(a[k][i]) > fabs(a[maxRow][i])){
-//            maxRow = k;
-//         }
-//      }
-//
-//      // Меняем строки местами
-//      if(maxRow != i){
-//         for(int k = 0; k <= dim; k++){
-//            swap(a[i][k], a[maxRow][k]);
-//         }
-//      }
-//
-//      // Проверка на нулевой ведущий элемент
-//      if(fabs(a[i][i]) < 1e-12){
-//         cout << "Система не имеет единственного решения.\n";
-//      }
-//
-//      // Нормализация и исключение
-//      for(int k = i + 1; k < dim; k++){
-//         double factor = a[k][i] / a[i][i];
-//         for(int j = i; j <= dim; j++){
-//            a[k][j] -= factor * a[i][j];
-//         }
-//      }
-//   }
-//
-//   // Обратный ход
-//   realscal v[5];
-//   for(int i = dim - 1; i >= 0; i--){
-//      v[i] = a[i][dim];
-//      for(int j = i + 1; j < dim; j++){
-//         v[i] -= a[i][j] * v[j];
-//      }
-//      v[i] /= a[i][i];
-//   }
-//   cout<<"\n\n";
-//   for(auto &row : a){
-//      for(auto &column : row){
-//         cout << column << " ";
-//      }
-//      cout << endl;
-//   }
-//}
+void debugPrint(real a[10][11]){
+   for(int i = 0; i<10; i++){
+      ostringstream line;
+      line << fixed << setprecision(precision);
+      for(int j = 0; j<11; j++){
+         line << setw(space) << a[i][j];
+      }
+      line << endl;
+      printf("%s", line.str().c_str());
+   }
+   printf("\n\n");
+}
 
 void Gauss(real *DI, real *AL, real *AU, int *IA, real *vec){
-   real matrix[5][6]{};
-
+   real a[10][11]{};
    for(int i = 0; i<dim; i++){
       for(int j = 0; j<dim; j++){
          if(i==j){
-            matrix[i][j] = DI[i];
+            a[i][j] = DI[i];
          } else{
             if(i<j){
                if(IA[j+1]-IA[j] != 0 && j-(IA[j+1]-IA[j]) <= i){
-                  matrix[i][j] = AU[IA[j+1]-1-(j-i)];
+                  a[i][j] = AU[IA[j+1]-1-(j-i)];
                }
             } else{
                if(IA[i+1]-IA[i] != 0 && i-(IA[i+1]-IA[i]) <= j){
-                  matrix[i][j] = AL[IA[i+1]-1-(i-j)];
+                  a[i][j] = AL[IA[i+1]-1-(i-j)];
                }
             }
          }
       }
-      matrix[i][dim] = vec[i];
+      a[i][dim] = vec[i];
    }
+   debugPrint(a);
 
-   for(auto &row : matrix){
-      for(auto &column : row){
-         cout << column << " ";
+   for(int i = 0; i < dim; i++){
+      // Поиск строки с максимальным элементом в текущем столбце
+      int maxRow = i;
+      for(int k = i + 1; k < dim; k++){
+         if(fabs(a[k][i]) > fabs(a[maxRow][i])){
+            maxRow = k;
+         }
       }
-      cout << endl;
-   }
 
-   for(int k = 0; k<dim; k++){
-      for(int i = 0; i<=dim; i++){
-         matrix[k][i] = matrix[k][i] / DI[k];
+      // Меняем строки местами
+      if(maxRow != i){
+         for(int k = 0; k <= dim; k++){
+            swap(a[i][k], a[maxRow][k]);
+         }
       }
-      for(int i = k+1; i<dim; i++){
-         real K = matrix[i][k] / matrix[k][k];
-         for(int j = 0; j<=dim; j++){
-            matrix[i][j] = matrix[i][j] - matrix[k][j] * K;
+
+      // Проверка на нулевой ведущий элемент
+      if(fabs(a[i][i]) < 1e-18){
+         cout << "Система не имеет единственного решения.\t"<<n<<endl;
+      }
+
+      // Нормализация и исключение
+      for(int k = i + 1; k < dim; k++){
+         double factor = a[k][i] / a[i][i];
+         for(int j = i; j <= dim; j++){
+            a[k][j] -= factor * a[i][j];
          }
       }
    }
 
-   for(int k = dim-1; k>=0; k--){
-      real K = 1/matrix[k][k];
-      for(int j = dim; j>=k; j--){
-         matrix[k][j] *= K;
+   // Обратный ход
+   for(int i = dim - 1; i >= 0; i--){
+      for(int j = i + 1; j < dim; j++){
+         a[i][dim] -= a[i][j] * a[j][dim];
       }
+      a[i][dim] /= a[i][i];
    }
-
-   for(int k = dim-1; k>=0; k--){
-      real buf = 0;
-      for(int j = dim-1; k!= dim-1 && j>k; j--){
-         buf += matrix[k][j]*vec[j];
-      }
-      vec[k] = matrix[k][dim] - buf;
+   for(int i = 0; i<dim; i++){
+      vec[i] = a[i][dim];
    }
 }
 
@@ -421,8 +366,6 @@ void prog3(){
 
 void PrintDenseMatrix(real *DI, real *AL, real *AU, int *IA){
    FILE *file;
-   int space = 12;
-   int precision = 6;
    if(fopen_s(&file, "A.txt", "w") != 0){
       cerr << "Ошибка: не удалось открыть файл " << endl;
       return;
@@ -458,16 +401,17 @@ void testmaker(){
    inputData("d1.txt", d1, 19);
    inputData("f1.txt", f1, 19);
 
-   for(int i = 0; i<19; i++){
+   for(int i = 0; i<1; i++){
       inputData(path::DI, DI, dim);
       inputData(path::AL, AL, profiles);
       inputData(path::AL, AU, profiles);
       inputData(path::F, vec, dim);
       DI[0] = d1[i];
       vec[0] = f1[i];
-      LU(DI, AL, AU, IA);
-      Y(DI,AL,AU,IA,vec);
-      X(DI,AL,AU,IA,vec);
+      //LU(DI, AL, AU, IA);
+      //Y(DI,AL,AU,IA,vec);
+      //X(DI,AL,AU,IA,vec);
+      Gauss(DI,AL,AU,IA,vec);
       outputX(vec);
    }
 }

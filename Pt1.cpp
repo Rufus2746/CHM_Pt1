@@ -1,4 +1,4 @@
-﻿#include "path5.h"
+﻿#include "path10.h"
 #include <iostream>
 #include <fstream>
 #include <math.h>
@@ -32,17 +32,17 @@ namespace F{
 namespace D{
    typedef double real;
    typedef double realscal;
-   constexpr const char *fmt = "%.14lf\n";
+   constexpr const char *fmt = "%18.14lf\n";
 }
 namespace FD{
    typedef float real;
    typedef double realscal;
-   constexpr const char *fmt = "%.6f\n";
+   constexpr const char *fmt = "%10.6f\n";
 }
 
 using namespace std;
 using namespace F;
-
+ 
 int dim = 0;
 int profiles = 0;
 int n = 0;
@@ -86,19 +86,18 @@ void inputData(string path, real *arr, int size){
       //Добавить выход из программы
    }
 }
-void outputX(string path, real *arr){
-   FILE *outFile = NULL;
-   errno_t err = fopen_s(&outFile, "../X.txt", "a");
-   if(err!=0||outFile==NULL){
-      perror("Ошибка открытия файла");
-      exit(1);
-   }
-   fprintf(outFile, "---   n = %d   ---", n);
+void outputX(real *arr){
+   FILE *file;
+   if(n==0)fopen_s(&file, "X.txt", "w");
+   else fopen_s(&file, "X.txt", "a");
+   if(file){
+   fprintf(file, "---   n = %d   ---\n", n);
    for(int i = 0; i<dim; i++){
-      fprintf(outFile, fmt, arr[i]);
+      fprintf(file, fmt, arr[i]);
    }
-   fprintf(outFile, "\n\n");
-   fclose(outFile);
+   fprintf(file, "\n\n");
+   fclose(file);
+   }
    n++;
 }
 int getPos(int i, int j, int *IA){
@@ -156,26 +155,23 @@ void LU(real *DI, real *AL, real *AU, int *IA){
       //DI
       icount = IA[i+1]-IA[i];
       //DI sum
-      for(int m = i-icount; m<i; m++){
-         index = IA[i]+(m-(i-icount))-1;
-         Utmp += AL[index]*AU[index];
+      for(int m = 0; m<icount; m++){
+         Utmp += AL[IA[i]-1+m]*AU[IA[i]-1+m];
       }
       Utmp = DI[i]-Utmp;
       DI[i] = sqrt(Utmp);
       Utmp = .0;
       //AL AU
-      if(i==1){
-         cout<<"";
-      }
       for(int j = i+1; j<dim; j++){
          jcount = IA[j+1]-IA[j];
          //AL AU sum
          if(i>=j-jcount){
             index = IA[j]+(i-(j-jcount))-1;
             for(int m = 0; m<i; m++){
-               if(jcount-m>1&&icount-m>0){
-                  Utmp += AU[IA[j+1]-2-j+i-m]*AL[IA[i+1]-2-m];
-                  Ltmp += AU[IA[i+1]-2-m]*AL[IA[j+1]-2-j+i-m];
+               if(m>=j-jcount&&m>=i-icount){
+                  //cout<<"i "<<i<<"\tj "<<j<<"\tU "<<AU[IA[j]-1+m-(j-jcount)]<<"\tL "<<AL[IA[i]-1+m-(i-icount)]<<endl;
+                  Utmp += AU[IA[j]-1+m-(j-jcount)]*AL[IA[i]-1+m-(i-icount)];
+                  Ltmp += AU[IA[i]-1+m-(i-icount)]*AL[IA[j]-1+m-(j-jcount)];
                }
             }
             //Меняем AU[index] AL[index]
@@ -187,8 +183,7 @@ void LU(real *DI, real *AL, real *AU, int *IA){
             AL[index] = Ltmp;
             Utmp = .0;
             Ltmp = .0;
-         };
-         cout<<endl;
+         }
       }
    }
 }
@@ -401,7 +396,7 @@ void prog1(){
    LU(DI, AL, AU, IA);
    Y(DI, AL, AU, IA, vec);
    X(DI, AL, AU, IA, vec);
-   outputX(path::X,vec);
+   outputX(vec);
 }
 
 void vecrog2(){
@@ -426,6 +421,8 @@ void prog3(){
 
 void PrintDenseMatrix(real *DI, real *AL, real *AU, int *IA){
    FILE *file;
+   int space = 12;
+   int precision = 6;
    if(fopen_s(&file, "A.txt", "w") != 0){
       cerr << "Ошибка: не удалось открыть файл " << endl;
       return;
@@ -433,12 +430,12 @@ void PrintDenseMatrix(real *DI, real *AL, real *AU, int *IA){
 
    for(int i = 0; i < dim; ++i){
       ostringstream line;
-      line << fixed << setprecision(6);
+      line << fixed << setprecision(precision);
       for(int j = 0; j < dim; ++j){
          if(i==j){
-            line << setw(12) << DI[i];
+            line << setw(space) << DI[i];
          } else{
-            line << setw(12) << getElem(i,j,IA,AL,AU);
+            line << setw(space) << getElem(i,j,IA,AL,AU);
          }
       }
       line << endl;
@@ -456,13 +453,23 @@ void testmaker(){
    real *DI = new real[dim];
    real *vec = new real[dim];
 
+   real *d1 = new real[19];
+   real *f1 = new real[19];
+   inputData("d1.txt", d1, 19);
+   inputData("f1.txt", f1, 19);
 
-   inputData(path::DI, DI, dim);
-   inputData(path::AL, AL, profiles);
-   inputData(path::AL, AU, profiles);
-   inputData(path::F, vec, dim);
-   LU(DI, AL, AU, IA);
-   PrintDenseMatrix(DI,AL,AU,IA);
+   for(int i = 0; i<19; i++){
+      inputData(path::DI, DI, dim);
+      inputData(path::AL, AL, profiles);
+      inputData(path::AL, AU, profiles);
+      inputData(path::F, vec, dim);
+      DI[0] = d1[i];
+      vec[0] = f1[i];
+      LU(DI, AL, AU, IA);
+      Y(DI,AL,AU,IA,vec);
+      X(DI,AL,AU,IA,vec);
+      outputX(vec);
+   }
 }
 
 int main(){

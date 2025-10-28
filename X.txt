@@ -1,357 +1,247 @@
----   n = 0   ----nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
-
-
----   n = 0   ----nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
-
-
----   n = 0   ----nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
-
-
----   n = 0   ----nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
-
-
----   n = 0   ----nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
-
-
----   n = 0   ----nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
-
-
----   n = 0   ----nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
-
-
----   n = 0   ----nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
-
-
----   n = 0   ----nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
-
-
----   n = 0   ----nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
-
-
----   n = 0   ----nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
-
-
----   n = 0   ----nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
-
-
----   n = 0   ----nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
-
-
----   n = 0   ----nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
-
-
----   n = 0   ----nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
-
-
----   n = 0   ----nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
-
-
----   n = 0   ----nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
-
-
----   n = 0   ----nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
-
-
----   n = 0   ----nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
-
-
----   n = 0   ----nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
-
-
----   n = 0   ----nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
-
-
----   n = 0   ----nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
-
-
----   n = 0   ----nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
-
-
----   n = 0   ----nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
-
-
----   n = 0   ----nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
-
-
----   n = 0   ----nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
-
-
----   n = 0   ----nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
-
-
----   n = 0   ----nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
-
-
----   n = 0   ----27.333328
--30.999992
--33.999996
--43.000000
--43.999996
-
-
----   n = 0   ----nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
-
-
----   n = 0   ----nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
-
-
----   n = 0   ----27.333328
--30.999992
--33.999996
--43.000000
--43.999996
-
-
----   n = 0   ----27.333328
--30.999992
--33.999996
--43.000000
--43.999996
-
-
----   n = 0   ----nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
-
-
----   n = 0   ----nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
-
-
----   n = 0   ----27.333328
--30.999992
--33.999996
--43.000000
--43.999996
-
-
----   n = 0   ----27.333328
--30.999992
--33.999996
--43.000000
--43.999996
+---   n = 0   ---
+  1.000004
+  2.000007
+  3.000008
+  4.000008
+  5.000008
+  6.000007
+  7.000008
+  8.000008
+  9.000008
+ 10.000008
+
+
+---   n = 1   ---
+  0.999997
+  1.999996
+  2.999996
+  3.999996
+  4.999997
+  5.999997
+  6.999996
+  7.999996
+  8.999996
+  9.999997
+
+
+---   n = 2   ---
+  1.000312
+  2.000316
+  3.000316
+  4.000316
+  5.000316
+  6.000315
+  7.000316
+  8.000317
+  9.000317
+ 10.000317
+
+
+---   n = 3   ---
+  0.999286
+  1.999284
+  2.999284
+  3.999284
+  4.999285
+  5.999285
+  6.999284
+  7.999284
+  8.999285
+  9.999285
+
+
+---   n = 4   ---
+  1.023862
+  2.023865
+  3.023865
+  4.023865
+  5.023865
+  6.023864
+  7.023865
+  8.023866
+  9.023866
+ 10.023866
+
+
+---   n = 5   ---
+  1.000001
+  2.000000
+  3.000000
+  4.000000
+  5.000000
+  6.000001
+  7.000000
+  8.000000
+  9.000000
+ 10.000000
+
+
+---   n = 6   ---
+  2.999998
+  4.000000
+  5.000000
+  6.000000
+  7.000001
+  8.000000
+  9.000000
+ 10.000001
+ 11.000001
+ 12.000000
+
+
+---   n = 7   ---
+  1.000000
+  1.999999
+  2.999999
+  3.999999
+  4.999999
+  6.000000
+  6.999999
+  8.000000
+  8.999999
+ 10.000000
+
+
+---   n = 8   ---
+  1.000000
+  1.999999
+  2.999999
+  3.999999
+  4.999999
+  6.000000
+  6.999999
+  8.000000
+  8.999999
+ 10.000000
+
+
+---   n = 9   ---
+  1.000000
+  1.999999
+  2.999999
+  3.999999
+  4.999999
+  6.000000
+  6.999999
+  8.000000
+  8.999999
+ 10.000000
+
+
+---   n = 10   ---
+  1.000000
+  1.999999
+  2.999999
+  3.999999
+  4.999999
+  6.000000
+  6.999999
+  8.000000
+  8.999999
+ 10.000000
+
+
+---   n = 11   ---
+  1.000000
+  1.999999
+  2.999999
+  3.999999
+  4.999999
+  6.000000
+  6.999999
+  8.000000
+  8.999999
+ 10.000000
+
+
+---   n = 12   ---
+  1.000000
+  1.999999
+  2.999999
+  3.999999
+  4.999999
+  6.000000
+  6.999999
+  8.000000
+  8.999999
+ 10.000000
+
+
+---   n = 13   ---
+  1.000000
+  1.999999
+  2.999999
+  3.999999
+  4.999999
+  6.000000
+  6.999999
+  8.000000
+  8.999999
+ 10.000000
+
+
+---   n = 14   ---
+  1.000000
+  1.999999
+  2.999999
+  3.999999
+  4.999999
+  6.000000
+  6.999999
+  8.000000
+  8.999999
+ 10.000000
+
+
+---   n = 15   ---
+  1.000000
+  1.999999
+  2.999999
+  3.999999
+  4.999999
+  6.000000
+  6.999999
+  8.000000
+  8.999999
+ 10.000000
+
+
+---   n = 16   ---
+  1.000000
+  1.999999
+  2.999999
+  3.999999
+  4.999999
+  6.000000
+  6.999999
+  8.000000
+  8.999999
+ 10.000000
+
+
+---   n = 17   ---
+  1.000000
+  1.999999
+  2.999999
+  3.999999
+  4.999999
+  6.000000
+  6.999999
+  8.000000
+  8.999999
+ 10.000000
+
+
+---   n = 18   ---
+  1.000000
+  1.999999
+  2.999999
+  3.999999
+  4.999999
+  6.000000
+  6.999999
+  8.000000
+  8.999999
+ 10.000000
 
 
